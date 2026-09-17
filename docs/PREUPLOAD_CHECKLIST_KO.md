@@ -1,6 +1,6 @@
 # GitHub 업로드 전 확인 — 0.2.1
 
-> v0.2.1 업로드 전 기록입니다. v0.2.2에는 원본 `demo/demo.mp4`를 크기·SHA 확인 후 추가해 전체 68개 경로를 갖췄습니다. 아래 과거 상태와 공개 제안은 현재 지침이 아닙니다. 최신 근거·수동 점검 한계는 [RELEASE_VERIFICATION_KO.md](RELEASE_VERIFICATION_KO.md), 최신 CI와 병합 상태는 [PR #1](https://github.com/ahillk9009-ship-it/ahill-cutguard/pull/1)을 참고하세요. 저장소 비공개를 유지하며 공개 릴리스는 하지 않습니다.
+> v0.2.1 업로드 전 기록입니다. v0.2.2에는 원본 `demo/demo.mp4`를 크기·SHA 확인 후 추가해 전체 68개 경로를 갖췄습니다. 아래 과거 상태와 공개 제안은 현재 지침이 아닙니다. 최신 근거·수동 점검 한계는 [RELEASE_VERIFICATION_KO.md](RELEASE_VERIFICATION_KO.md), 최신 CI와 병합 상태는 [PR #1](https://github.com/ahillk9009-ship-it/ahill-cutguard/pull/1)을 참고하세요. 이후 메인테이너가 v0.2.2 공개 알파 배포를 승인했습니다. 공개 범위와 최신 한계는 검증 문서를 따릅니다.
 
 대상 사용자: ahillk9009-ship-it
 제안 저장소: ahill-cutguard (아직 생성·게시하지 않음)

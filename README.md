@@ -2,6 +2,10 @@
 
 **Local-first video and subtitle QC with reviewable evidence.**
 
+한국어 숏폼 편집을 위한 로컬 영상·자막 검수 도구입니다. 짧은 컷, 검은 화면, 정지 구간과 SRT 타이밍·읽기 속도 문제를 찾아 근거 이미지와 함께 검토 후보로 보여줍니다. 원본 영상은 변경하지 않으며, 자동 오류 확정·자동 수정 도구가 아닙니다.
+
+[Download v0.2.2 alpha](https://github.com/ahillk9009-ship-it/ahill-cutguard/releases/tag/v0.2.2) · [한국어 시작 안내](QUICKSTART_KO.md)
+
 CutGuard turns suspicious video segments into time-coded review candidates, with before/during/after images, a portable Korean HTML report, JSON and generic CSV markers. Built for short-form editors who need to inspect stray cuts, black frames, freezes, and subtitle timing/reading problems.
 
 **Status: v0.2.2 alpha.** Rule-based inspection, not an AI model or automatic editor. It never edits source media, calls a paid API, or uploads your footage. No Python runtime dependencies; video checks require an external FFmpeg installation.
@@ -33,7 +37,7 @@ Desktop launcher:
 python -m cutguard gui
 ```
 
-Windows: double-click `START_WINDOWS.bat` after installing Python (including Tcl/Tk) and FFmpeg. The launcher selects input files and an output parent folder, then opens the report in your default browser. Windows CI passed the real Tk event-loop/SRT scan smoke test; OS dialogs, batch-file launching and opening the default browser still require workstation checks.
+Windows: double-click `START_WINDOWS.bat` after installing Python (including Tcl/Tk) and FFmpeg. The launcher selects input files and an output parent folder, then opens the report in your default browser. Windows CI passed the real Tk event-loop/SRT scan smoke test. A subsequent workstation check confirmed launcher execution, Korean GUI text, real video/SRT/output-folder dialogs and scan completion; the operator reported that the default Edge report window opened automatically. Manual report layout and review-file interaction checks remain incomplete.
 
 ## Checks
 
@@ -128,7 +132,7 @@ python -m cutguard compare examples/faulty-v020/report.json examples/clean-v020/
 
 Finding indices are zero-based. The comparison returns remaining, no_longer_detected and newly_detected items with a configurable time tolerance. It rejects different detector settings or video/subtitle check scopes. It does not align shifted edits or prove repair. Reviews are not carried across reports. Outputs must be new files.
 
-Current verification and publication assessment: [docs/RELEASE_VERIFICATION_KO.md](docs/RELEASE_VERIFICATION_KO.md). The repository remains private; public release is not authorized. This is an experimental alpha, not a production reliability claim.
+Current verification and publication assessment: [docs/RELEASE_VERIFICATION_KO.md](docs/RELEASE_VERIFICATION_KO.md). v0.2.2 is an experimental public alpha distributed as a GitHub pre-release, not a production reliability claim. No PyPI publication or bundled Windows executable is provided.
 
 ## Installation diagnosis (0.2.1)
 
@@ -136,4 +140,4 @@ Run `python -m cutguard doctor` or double-click `CHECK_WINDOWS.bat`. It checks P
 
 ## Release gates
 
-`python qa/local_gate.py` runs all local tests and fails if any test is skipped or FFmpeg is unavailable. The source import commit `4c05c3f` passed tests and release-check: Windows Tk, Ubuntu/Windows Chromium and wheel/sdist metadata. See [verification evidence and limits](docs/RELEASE_VERIFICATION_KO.md) and [qa/README_KO.md](qa/README_KO.md). The original `demo/demo.mp4` is included with its handoff blob SHA and byte size verified, completing the 68-file source set. The full 33-test suite also passed locally on Windows with FFmpeg. See [PR #1](https://github.com/ahillk9009-ship-it/ahill-cutguard/pull/1) for the latest commit's CI and merge status. No automatic publishing is configured. OS-dialog and default-browser workstation checks remain outstanding, so this is an experimental alpha, not a validated stable release.
+`python qa/local_gate.py` runs all local tests and fails if any test is skipped or FFmpeg is unavailable. Main commit `105a0e1` passed tests and release-check: Windows Tk, Ubuntu/Windows Chromium and wheel/sdist metadata. See [verification evidence and limits](docs/RELEASE_VERIFICATION_KO.md) and [qa/README_KO.md](qa/README_KO.md). The original `demo/demo.mp4` is included with its handoff blob SHA and byte size verified, completing the 68-file source set. The full 33-test suite also passed locally on Windows with FFmpeg. Subsequent workstation launcher, file selection and scan checks passed; manual report visuals, native review JSON export/import and real-world accuracy remain unverified. No automatic publishing is configured. This is an experimental alpha, not a validated stable release.

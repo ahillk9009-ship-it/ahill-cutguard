@@ -2,6 +2,9 @@
 
 ## 0.2.2 — 2026-09-17
 
+- First public GitHub alpha pre-release, with a source ZIP and documented verification limits; no PyPI or standalone executable distribution.
+- Record workstation launcher, native file selection and scan completion checks; manual report visuals and review-file interactions remain unverified.
+
 - Fail-closed local release gate with structured evidence; skipped tests cannot pass.
 - Add real-browser and Windows Tk acceptance scripts and non-publishing CI jobs; source import commit `4c05c3f` passed Ubuntu/Windows Chromium, Windows Tk and packaging checks.
 - Record remote test evidence and remaining OS-dialog/default-browser limits.
