@@ -4,7 +4,8 @@
 
 - Fail-closed local release gate with structured evidence; skipped tests cannot pass.
 - Add real-browser and Windows Tk acceptance scripts and non-publishing CI jobs; source import commit `4c05c3f` passed Ubuntu/Windows Chromium, Windows Tk and packaging checks.
-- Record remote test evidence and remaining OS-dialog/default-browser limits; keep private import pending the original demo video.
+- Record remote test evidence and remaining OS-dialog/default-browser limits.
+- Include the original synthetic demo video, verified against the handoff blob SHA and byte size, completing the 68-file source set.
 - Handle missing GUI display with an actionable CLI error instead of a traceback.
 - Add source-distribution manifest for tests, QA and examples.
 
