@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+cutguard-report/
+
+.qa-venv/
+qa-results/
+
+# Historical generated output; reproducible from included fixtures
+demo/report/
+docs/test-results.txt

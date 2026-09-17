@@ -1,0 +1,10 @@
+{
+  "duration": 7.0,
+  "visual_events": [
+    {"code": "short_cut", "start": 2.0, "end": 2.08},
+    {"code": "black", "start": 4.08, "end": 4.4},
+    {"code": "freeze", "start": 4.4, "end": 6.0}
+  ],
+  "tolerance_seconds": 0.08,
+  "note": "Synthetic fixture only, not a real-world accuracy benchmark."
+}

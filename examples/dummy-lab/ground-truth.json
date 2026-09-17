@@ -1,0 +1,55 @@
+{
+  "description": "Hand-authored synthetic ground truth; not real-world accuracy evidence.",
+  "fps": 25,
+  "duration": 12,
+  "tolerance_seconds": 0.08,
+  "cases": {
+    "01-clean": {
+      "defects": []
+    },
+    "02-faulty": {
+      "defects": [
+        {
+          "code": "short_cut",
+          "start": 3.0,
+          "end": 3.08
+        },
+        {
+          "code": "black",
+          "start": 6.0,
+          "end": 6.24
+        },
+        {
+          "code": "freeze",
+          "start": 8.0,
+          "end": 9.44
+        },
+        {
+          "code": "srt_overlap",
+          "cue": "2"
+        },
+        {
+          "code": "srt_speed",
+          "cue": "2"
+        },
+        {
+          "code": "srt_line_length",
+          "cue": "2"
+        },
+        {
+          "code": "srt_out_of_bounds",
+          "cue": "4"
+        }
+      ]
+    },
+    "03-intentional": {
+      "defects": [],
+      "approved_effects": [
+        "3.00–3.08 flash",
+        "6.00–6.24 blackout",
+        "8.00–9.44 hold"
+      ],
+      "note": "Video bytes equal faulty case; editorial intent differs, subtitles are clean. Heuristic candidates must not be presented as confirmed defects."
+    }
+  }
+}
