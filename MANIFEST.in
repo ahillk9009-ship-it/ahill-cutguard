@@ -1,0 +1,13 @@
+include LICENSE README.md QUICKSTART_KO.md CHANGELOG.md CONTRIBUTING.md SECURITY.md AGENTS.md
+include START_WINDOWS.bat CHECK_WINDOWS.bat
+recursive-include tests *.py
+recursive-include scripts *.py *.cjs
+recursive-include qa *.py *.md
+recursive-include docs *.md
+recursive-include examples *.mp4 *.srt *.json *.html *.py *.md
+recursive-include .github *.yml *.md
+exclude docs/test-results.txt
+prune qa-results
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

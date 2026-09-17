@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "report_id": "bd310454cc1b75c01cf7f52006245ac9b842ccf6435728bd5c8ada63fa315451",
+  "decisions": {
+    "0": {
+      "status": "pending",
+      "note": ""
+    },
+    "1": {
+      "status": "pending",
+      "note": ""
+    },
+    "2": {
+      "status": "pending",
+      "note": ""
+    },
+    "3": {
+      "status": "needs_fix",
+      "note": "합성 예제: 의도적으로 넣은 2프레임 컷"
+    },
+    "4": {
+      "status": "pending",
+      "note": ""
+    },
+    "5": {
+      "status": "pending",
+      "note": ""
+    },
+    "6": {
+      "status": "pending",
+      "note": ""
+    }
+  }
+}

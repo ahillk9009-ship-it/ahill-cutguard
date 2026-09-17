@@ -1,0 +1,4 @@
+* text=auto
+*.csv text eol=lf
+*.bat text eol=crlf
+*.mp4 binary

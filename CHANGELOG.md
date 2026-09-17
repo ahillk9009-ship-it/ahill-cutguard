@@ -1,0 +1,33 @@
+# Changelog
+
+## 0.2.2 — 2026-09-17
+
+- Fail-closed local release gate with structured evidence; skipped tests cannot pass.
+- Add real-browser and Windows Tk acceptance scripts and non-publishing CI jobs (execution pending).
+- Handle missing GUI display with an actionable CLI error instead of a traceback.
+- Add source-distribution manifest for tests, QA and examples.
+
+
+## 0.2.1 — 2026-09-17
+
+- Reject malformed external reports, invalid schemas and non-finite/negative times before output.
+- Add read-only doctor command and Windows prerequisite-check launcher.
+- Expand regression tests to 32; document pre-publication gates and GitHub target.
+
+
+## 0.2.0 — 2026-09-17
+
+- Report-bound review JSON with status, notes, import/export controls and CLI.
+- Time-based revision comparison with setting/scope compatibility checks.
+- Added normal/faulty/intentional synthetic fixtures and 9 regression tests.
+- Browser controls remain experimental; Windows GUI remains unverified.
+
+
+## 0.1.0 — 2026-09-16
+
+- Initial alpha: FFmpeg black/freeze/short-cut candidates.
+- SRT format, overlaps, duration, reading speed, line and ordering checks.
+- Portable Korean HTML evidence report, versioned JSON and generic CSV.
+- CLI with CI exit codes, Python API, optional Tk desktop launcher.
+- Synthetic reproducible fixture and unittest suite.
+- No public release, real-world benchmark or Windows validation claimed.
