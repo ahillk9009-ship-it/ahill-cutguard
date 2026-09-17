@@ -33,7 +33,7 @@ Desktop launcher:
 python -m cutguard gui
 ```
 
-Windows: double-click `START_WINDOWS.bat` after installing Python (including Tcl/Tk) and FFmpeg. The launcher selects input files and an output parent folder, then opens the report in your default browser. Windows execution has not been tested in the development Linux environment.
+Windows: double-click `START_WINDOWS.bat` after installing Python (including Tcl/Tk) and FFmpeg. The launcher selects input files and an output parent folder, then opens the report in your default browser. Windows CI passed the real Tk event-loop/SRT scan smoke test; OS dialogs, batch-file launching and opening the default browser still require workstation checks.
 
 ## Checks
 
@@ -118,7 +118,7 @@ This project is independent and is not an official OpenAI product. No user/downl
 
 ## Review and revision comparison (0.2)
 
-In the HTML report select Pending / Approved intentional effect / Needs fix, add a note, and export review JSON. Reopen the same report and import it. Decisions are SHA-256-bound to the report and never remove detections. This UI is currently experimental: script logic was tested with a simulated DOM, but actual browser download/import and layout are unverified. CLI persistence is tested.
+In the HTML report select Pending / Approved intentional effect / Needs fix, add a note, and export review JSON. Reopen the same report and import it. Decisions are SHA-256-bound to the report and never remove detections. Actual Chromium download/import, filtering, mismatch rejection and narrow-viewport overflow checks passed on Ubuntu and Windows CI. OS file-picker interaction, other browsers and full visual review remain unverified. CLI persistence is tested.
 
 ```bash
 python -m cutguard review examples/faulty-v020/report.json --finding 3 --status needs_fix --note "stray cut" --out my-review.json
@@ -128,7 +128,7 @@ python -m cutguard compare examples/faulty-v020/report.json examples/clean-v020/
 
 Finding indices are zero-based. The comparison returns remaining, no_longer_detected and newly_detected items with a configurable time tolerance. It rejects different detector settings or video/subtitle check scopes. It does not align shifted edits or prove repair. Reviews are not carried across reports. Outputs must be new files.
 
-Publication assessment: [docs/PUBLICATION_REVIEW_KO.md](docs/PUBLICATION_REVIEW_KO.md). Suitable for an experimental public alpha, not a production reliability claim.
+Current verification and publication assessment: [docs/RELEASE_VERIFICATION_KO.md](docs/RELEASE_VERIFICATION_KO.md). The repository remains private; public release is not authorized. This is an experimental alpha, not a production reliability claim.
 
 ## Installation diagnosis (0.2.1)
 
@@ -136,4 +136,4 @@ Run `python -m cutguard doctor` or double-click `CHECK_WINDOWS.bat`. It checks P
 
 ## Release gates
 
-`python qa/local_gate.py` runs all local tests and fails if any test is skipped or FFmpeg is unavailable. Separate real Windows Tk and real Chromium scripts are in `qa/`; they are also configured in `release-check.yml`. These remote jobs have **not run yet**. See [qa/README_KO.md](qa/README_KO.md). No automatic publishing is configured. Until those gates and workstation smoke checks pass, this is an experimental alpha, not a validated stable release.
+`python qa/local_gate.py` runs all local tests and fails if any test is skipped or FFmpeg is unavailable. The source import commit `4c05c3f` passed tests and release-check: Windows Tk, Ubuntu/Windows Chromium and wheel/sdist metadata. See [verification evidence and limits](docs/RELEASE_VERIFICATION_KO.md) and [qa/README_KO.md](qa/README_KO.md). The original `demo/demo.mp4` upload is still pending; later commits require their own CI result. No automatic publishing is configured. Workstation smoke checks remain outstanding, so this is an experimental alpha, not a validated stable release.

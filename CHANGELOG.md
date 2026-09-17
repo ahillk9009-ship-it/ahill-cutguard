@@ -3,7 +3,8 @@
 ## 0.2.2 — 2026-09-17
 
 - Fail-closed local release gate with structured evidence; skipped tests cannot pass.
-- Add real-browser and Windows Tk acceptance scripts and non-publishing CI jobs (execution pending).
+- Add real-browser and Windows Tk acceptance scripts and non-publishing CI jobs; source import commit `4c05c3f` passed Ubuntu/Windows Chromium, Windows Tk and packaging checks.
+- Record remote test evidence and remaining OS-dialog/default-browser limits; keep private import pending the original demo video.
 - Handle missing GUI display with an actionable CLI error instead of a traceback.
 - Add source-distribution manifest for tests, QA and examples.
 

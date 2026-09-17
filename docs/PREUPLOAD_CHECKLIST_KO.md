@@ -1,5 +1,7 @@
 # GitHub 업로드 전 확인 — 0.2.1
 
+> v0.2.1 업로드 전 기록입니다. 2026-09-17 현재 비공개 저장소와 Draft PR #1이 존재하며, 원본 68개 중 67개 경로가 업로드됐습니다. 원본 `demo/demo.mp4`만 남았습니다. 소스 커밋 `4c05c3f`의 tests·release-check는 모두 통과했습니다. 아래 과거 상태와 공개 제안은 현재 지침이 아닙니다. 최신 근거·수동 점검 한계·업로드 상태는 [RELEASE_VERIFICATION_KO.md](RELEASE_VERIFICATION_KO.md)를 참고하세요. 저장소 비공개를 유지하며 공개 릴리스는 하지 않습니다.
+
 대상 사용자: ahillk9009-ship-it
 제안 저장소: ahill-cutguard (아직 생성·게시하지 않음)
 
