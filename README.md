@@ -63,6 +63,8 @@ SRT input supports UTF-8/BOM and CP949 fallback. Normalize Korean text to NFC fo
 
 Existing output paths are rejected rather than overwritten. Evidence is limited to the first 24 visual findings by default (3 frames per finding); all findings remain in JSON/HTML. Reports may contain sensitive source frames and file names.
 
+Unreleased display fix: newly rendered HTML uses the report's recorded version in both the header and footer. The published v0.2.2 source still has a fixed `0.1` header label; its footer records the report version. This display fix does not change report IDs, findings or review JSON, and does not rewrite existing reports.
+
 ## CLI examples
 
 ```bash
