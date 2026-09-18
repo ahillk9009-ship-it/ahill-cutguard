@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Use the report's recorded version in the HTML header, matching the footer instead of displaying a fixed `0.1`. Existing reports and review JSON are unchanged.
+
 ## 0.2.2 — 2026-09-17
 
 - First public GitHub alpha pre-release, with a source ZIP and documented verification limits; no PyPI or standalone executable distribution.
